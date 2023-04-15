@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Div Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .info {
+            color: gray;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+
+
+        .info div {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .info div>label {
+            font-weight: bolder;
+            margin-right: 5px;
+        }
+
+        .info div>span {
+            font-size: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleSelection">Enable screenshot</button>
+    <div class="info">
+        <div>
+            <label>Mouse</label> <span>Show target</span>
+            <label>Click</label> <span>Do screenshot</span>
+            <label>Ctrl</label> <span>Goto parent</span>
+        </div>
+
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
