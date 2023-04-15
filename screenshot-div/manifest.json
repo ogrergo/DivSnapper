@@ -1,11 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Div to SVG Capture",
+    "name": "DivSnapper",
     "version": "1.0",
-    "description": "Capture a div and download it as an SVG file",
-    "permissions": [
-        "activeTab"
-    ],
+    "description": "Capture a DOM element and download it as a PNG file.",
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
