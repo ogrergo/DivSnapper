@@ -29,21 +29,18 @@
             color: gray;
             font-size: 11px;
             margin-top: 10px;
-        }
 
-
-        .info div {
             display: grid;
             grid-template-columns: auto 1fr;
             grid-template-rows: 1fr 1fr 1fr;
         }
 
-        .info div>label {
+        .info>label {
             font-weight: bolder;
             margin-right: 5px;
         }
 
-        .info div>span {
+        .info>span {
             font-size: 10px;
             font-style: italic;
         }
@@ -53,12 +50,9 @@
 <body>
     <button id="toggleSelection">Enable screenshot</button>
     <div class="info">
-        <div>
-            <label>Mouse</label> <span>Show target</span>
-            <label>Click</label> <span>Do screenshot</span>
-            <label>Ctrl</label> <span>Goto parent</span>
-        </div>
-
+        <label>Mouse</label> <span>Show target</span>
+        <label>Click</label> <span>Do screenshot</span>
+        <label>Ctrl</label> <span>Goto parent</span>
     </div>
     <script src="popup.js"></script>
 </body>

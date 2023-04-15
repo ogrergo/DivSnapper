@@ -14,18 +14,17 @@ function toggleDivSelection() {
     if (isSelectionModeActive) {
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('click', onClick);
-        document.addEventListener('keydown', onKeyDown);
         document.addEventListener('keyup', onKeyUp);
     } else {
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('click', onClick);
-        document.removeEventListener('keydown', onKeyDown);
         document.removeEventListener('keyup', onKeyUp);
         if (lastHoveredElement) {
             lastHoveredElement.classList.remove('selected-element');
         }
     }
 }
+
 function onMouseMove(event) {
     if (lastHoveredElement) {
         lastHoveredElement.classList.remove('selected-element');
@@ -38,8 +37,6 @@ function onMouseMove(event) {
 
 
 function captureScreenshot(element, filename) {
-    // const element = document.body;
-
     if (!element) {
         console.error('Element not found');
         return;
@@ -47,9 +44,6 @@ function captureScreenshot(element, filename) {
 
     html2canvas(element, { scrollY: -window.scrollY, useCORS: true })
         .then((canvas) => {
-
-            // window.open(canvas.toDataURL('image/png'), '_blank');
-
             const link = document.createElement('a');
             link.href = canvas.toDataURL('image/png');
             link.target = '_blank'
@@ -72,13 +66,6 @@ function onClick(event) {
             event.preventDefault();
             event.stopPropagation();
         }
-
-    }
-}
-
-
-function onKeyDown(event) {
-    if (event.key === 'Control') {
     }
 }
 
